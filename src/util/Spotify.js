@@ -2,8 +2,8 @@ let accessToken;
 let expires_in;
 const cliendID = '32b49adec71a4c0eae6a66fa1227222c';
 //const clientSecret = '863e0cccd5474d3c846114d5d6153408';
-//let redirect_uri = 'https://psevdon1m.github.io/jam';
-let redirect_uri = "http://localhost:3000/jam";
+let redirect_uri = 'https://psevdon1m.github.io/jam';
+// let redirect_uri = "http://localhost:3000/jam";
 
 
 
