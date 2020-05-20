@@ -4,6 +4,8 @@
     align-items: center;
     overflow-y: scroll;
     width: 37%;
+    min-height: 250px;
+    height: auto;
     max-height: 950px;
     padding: 2.27rem 1.16rem;
     background-color: rgba(1, 12, 63, 0.7);
@@ -34,6 +36,7 @@
     transition: background-color .25s;
     color: #fff;
     font-weight: 500;
+    outline: none;
   }
   
   .Playlist-save:hover {

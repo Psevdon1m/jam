@@ -2,7 +2,8 @@ let accessToken;
 let expires_in;
 const cliendID = '32b49adec71a4c0eae6a66fa1227222c';
 //const clientSecret = '863e0cccd5474d3c846114d5d6153408';
-let redirect_uri = 'https://psevdon1m.github.io/jam/';
+//let redirect_uri = 'https://psevdon1m.github.io/jam';
+let redirect_uri = "http://localhost:3000/jam";
 
 
 
@@ -14,7 +15,12 @@ const Spotify = {
         };
          
         const accessTokenMatch = window.location.href.match(/access_token=([^&]*)/);
+        console.log('AccessTokenMatch Full'+ accessTokenMatch);
+       // console.log('AccessTokenMatch [1]'+ accessTokenMatch[1]);
         const expires_in_data = window.location.href.match(/expires_in=([^&]*)/);
+        console.log('Expires in data Full'+ expires_in_data);
+       // console.log('Epires in data [1]'+ expires_in_data[1]);
+       
 
         if(accessTokenMatch && expires_in_data){
 
@@ -26,7 +32,7 @@ const Spotify = {
             return accessToken;
         }else {
             const urlToToken = `https://accounts.spotify.com/authorize?client_id=${cliendID}&redirect_uri=${redirect_uri}&scope=user-read-private%20user-read-email%20playlist-modify-public&response_type=token`;
-            window.location = urlToToken;
+            window.location.href = urlToToken;
         }
     },
 
